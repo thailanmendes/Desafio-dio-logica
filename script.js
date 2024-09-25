@@ -37,5 +37,58 @@ Ao final deve se exibir uma mensagem:
  
 Bons estudos 😉
 */
+let heroi = "";
+let experiencia = 0;
 
 
+do {
+  heroi = prompt("Qual nome do herói?");
+  if (!isNaN(heroi)) {
+    alert("Por favor, digite um nome válido (apenas letras e não vazio).");
+  }
+} while (!isNaN(heroi));
+
+do {
+    experiencia = parseFloat(prompt("Quanto de experiência ele tem?"));
+    if (experiencia <= 0 || isNaN(experiencia)) {
+        alert("Por favor, insira uma quantidade válida de experiência.");
+    }
+}while(experiencia <= 0 || isNaN(experiencia))
+
+
+if (experiencia <= 1000) {
+  alert(
+    heroi + " tem " + experiencia + " pontos, portanto está no nível Ferro."
+  );
+} else if (experiencia > 1000 && experiencia <= 2000) {
+  alert(
+    heroi + " tem " + experiencia + " pontos, portanto está no nível Bronze."
+  );
+} else if (experiencia > 2000 && experiencia <= 5000) {
+  alert(
+    heroi + " tem " + experiencia + " pontos, portanto está no nível Prata."
+  );
+} else if (experiencia > 5000 && experiencia <= 7000) {
+  alert(
+    heroi + " tem " + experiencia + " pontos, portanto está no nível Ouro."
+  );
+} else if (experiencia > 7000 && experiencia <= 8000) {
+  alert(
+    heroi + " tem " + experiencia + " pontos, portanto está no nível Platina."
+  );
+} else if (experiencia > 8000 && experiencia <= 9000) {
+  alert(
+    heroi +
+      " tem " +
+      experiencia +
+      " pontos, portanto está no nível Ascendente."
+  );
+} else if (experiencia > 9000 && experiencia <= 10000) {
+  alert(
+    heroi + " tem " + experiencia + " pontos, portanto está no nível Imortal."
+  );
+} else {
+  alert(
+    heroi + " tem " + experiencia + " pontos, portanto está no nível Radiante."
+  );
+}
